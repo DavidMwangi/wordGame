@@ -172,6 +172,19 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
+    
+    for letter in word:
+        
+        if letter in hand.keys():
+            
+            hand[letter] -= 1
+            
+            if hand[letter] == 0:
+            
+                del hand[letter]
+            
+
+    return hand
 
 
 
